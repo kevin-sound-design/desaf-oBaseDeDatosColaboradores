@@ -1,19 +1,17 @@
-import Table from 'react-bootstrap/Table';
-
 function Listado({arrayColaboradores}){
 
     return (
-        <Table responsive="xl" className='miTabla table table-striped table-hover'>
-            
-            <thead>
-                 <tr>
-                    <th>Nombre</th>
-                    <th>Correo</th>
-                    <th>Edad</th>
-                    <th>Cargo</th>
-                    <th>Telefono</th>
-                </tr>
-            </thead>
+        <div className="miTabla table-responsive">
+            <table className="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Edad</th>
+                        <th>Cargo</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
             <tbody>
                 {arrayColaboradores.map((colaborador)=>(
                     <tr key={colaborador.id}>
@@ -26,7 +24,11 @@ function Listado({arrayColaboradores}){
                 ))}
                 
             </tbody>
-        </Table>
+            </table>
+        </div>
+            
+            
+     
     )
 }
 

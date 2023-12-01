@@ -12,14 +12,14 @@ function App() {
   const [verificacion, setVerificacion]=useState("");
 
   return (
-    <div className="myContainer">
+    <div className="myContainer row p-3 p-xl-5 align-items-xl-center">
     
-        <div className='listContainer'>
+        <div className='listContainer col-12 col-xl-9'>
             <h1>Lista de colaboradores</h1>
             <Buscador colaboradores = {colaboradores} setColaboradores = {setColaboradores} baseColaboradores={BaseColaboradores} />
             <Listado arrayColaboradores = {colaboradores} />         
         </div>
-        <div className="formContainer">
+        <div className="formContainer col">
             <Formulario setColaboradores = {setColaboradores} colaboradores ={colaboradores} setVerificacion={setVerificacion} />
             <Alert mensaje= {verificacion} />
         </div>
